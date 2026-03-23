@@ -1,22 +1,25 @@
-public class Employee {
-    String name;
-    int skill;
-    double salary;
+package com.example.techcorp;
 
-    // Konstruktor
+public abstract class Employee implements Workable {
+    private String name;
+    private int skill;
+    private double salary;
+
     public Employee(String name, int skill, double salary) {
         this.name = name;
         this.skill = skill;
         this.salary = salary;
     }
 
-    // Metoda work
-    public int work() {
+    public String getName() {
+        return name;
+    }
+
+    public int getSkill() {
         return skill;
     }
-    
-    // Dodatkowa metoda pomocnicza do wyświetlania danych
-    public String getInfo() {
-        return name + " (Skill: " + skill + ")";
+
+    public double getSalary() {
+        return salary;
     }
 }
