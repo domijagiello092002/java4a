@@ -1,0 +1,353 @@
+[1mdiff --git a/com/example/techcorp/Company.class b/com/example/techcorp/Company.class[m
+[1mdeleted file mode 100644[m
+[1mindex dd62c99..0000000[m
+Binary files a/com/example/techcorp/Company.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Company.java b/com/example/techcorp/Company.java[m
+[1mdeleted file mode 100644[m
+[1mindex 3750af6..0000000[m
+[1m--- a/com/example/techcorp/Company.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,49 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-import java.util.ArrayList;[m
+[31m-import java.util.List;[m
+[31m-[m
+[31m-public class Company {[m
+[31m-    private String name;[m
+[31m-    private double cash;[m
+[31m-    private List<Employee> employees;[m
+[31m-    private List<Project> projects;[m
+[31m-[m
+[31m-    public Company(String name, double cash) {[m
+[31m-        this.name = name;[m
+[31m-        this.cash = cash;[m
+[31m-        this.employees = new ArrayList<>();[m
+[31m-        this.projects = new ArrayList<>();[m
+[31m-    }[m
+[31m-[m
+[31m-    public void hire(Employee employee) {[m
+[31m-        employees.add(employee);[m
+[31m-    }[m
+[31m-[m
+[31m-    public void startProject(Project project) {[m
+[31m-        projects.add(project);[m
+[31m-    }[m
+[31m-[m
+[31m-    public void showStatus() {[m
+[31m-        System.out.println("=== COMPANY STATUS ===");[m
+[31m-        System.out.println(" Name: " + name);[m
+[31m-        System.out.println(" Cash: " + cash);[m
+[31m-        System.out.println(" Employees: " + employees.size());[m
+[31m-        System.out.println(" Projects: " + projects.size());[m
+[31m-        System.out.println();[m
+[31m-[m
+[31m-        if (projects.isEmpty()) {[m
+[31m-            System.out.println("No active projects.");[m
+[31m-        } else {[m
+[31m-            System.out.println(" Projects:");[m
+[31m-            for (Project project : projects) {[m
+[31m-                System.out.println(" - " + project.getName() [m
+[31m-                    + " | status: " + project.getStatus()[m
+[31m-                    + " | progress: " + project.getProgress() + "/" + project.getRequiredWork()[m
+[31m-                    + " | finished: " + project.isFinished());[m
+[31m-            }[m
+[31m-        }[m
+[31m-[m
+[31m-        System.out.println("======================");[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/Developer.class b/com/example/techcorp/Developer.class[m
+[1mdeleted file mode 100644[m
+[1mindex 608a2c9..0000000[m
+Binary files a/com/example/techcorp/Developer.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Developer.java b/com/example/techcorp/Developer.java[m
+[1mdeleted file mode 100644[m
+[1mindex 14de795..0000000[m
+[1m--- a/com/example/techcorp/Developer.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,12 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-public class Developer extends Employee {[m
+[31m-    public Developer(String name, int skill, double salary) {[m
+[31m-        super(name, skill, salary);[m
+[31m-    }[m
+[31m-[m
+[31m-    @Override[m
+[31m-    public int work() {[m
+[31m-        return getSkill();[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/Employee.class b/com/example/techcorp/Employee.class[m
+[1mdeleted file mode 100644[m
+[1mindex 32f4a76..0000000[m
+Binary files a/com/example/techcorp/Employee.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Employee.java b/com/example/techcorp/Employee.java[m
+[1mdeleted file mode 100644[m
+[1mindex 1993cd7..0000000[m
+[1m--- a/com/example/techcorp/Employee.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,25 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-public abstract class Employee implements Workable {[m
+[31m-    private String name;[m
+[31m-    private int skill;[m
+[31m-    private double salary;[m
+[31m-[m
+[31m-    public Employee(String name, int skill, double salary) {[m
+[31m-        this.name = name;[m
+[31m-        this.skill = skill;[m
+[31m-        this.salary = salary;[m
+[31m-    }[m
+[31m-[m
+[31m-    public String getName() {[m
+[31m-        return name;[m
+[31m-    }[m
+[31m-[m
+[31m-    public int getSkill() {[m
+[31m-        return skill;[m
+[31m-    }[m
+[31m-[m
+[31m-    public double getSalary() {[m
+[31m-        return salary;[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/Main.class b/com/example/techcorp/Main.class[m
+[1mdeleted file mode 100644[m
+[1mindex 9e7f2c0..0000000[m
+Binary files a/com/example/techcorp/Main.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Main.java b/com/example/techcorp/Main.java[m
+[1mdeleted file mode 100644[m
+[1mindex 0ee8392..0000000[m
+[1m--- a/com/example/techcorp/Main.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,41 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-public class Main {[m
+[31m-    public static void main(String[] args) {[m
+[31m-        Company company = new Company("TechCorp", 50_000);[m
+[31m-        [m
+[31m-        Employee anna = new Developer("Anna", 9, 8_000);[m
+[31m-        Employee piotr = new Tester("Piotr", 6, 6_500);[m
+[31m-        Employee ewa = new Manager("Ewa", 7, 9_000);[m
+[31m-        [m
+[31m-        company.hire(anna);[m
+[31m-        company.hire(piotr);[m
+[31m-        company.hire(ewa);[m
+[31m-        [m
+[31m-        Project mobileApp = new Project("Mobile App", 30);[m
+[31m-        mobileApp.addEmployee(anna);[m
+[31m-        mobileApp.addEmployee(piotr);[m
+[31m-        mobileApp.addEmployee(ewa);[m
+[31m-        [m
+[31m-        company.startProject(mobileApp);[m
+[31m-        company.showStatus();[m
+[31m-        [m
+[31m-        // Exercise 1-4: Test status changes[m
+[31m-        mobileApp.start();[m
+[31m-        [m
+[31m-        mobileApp.workOneTurn();  // 1 tura pracy[m
+[31m-        System.out.println("\n--- Putting project on hold ---");[m
+[31m-        mobileApp.putOnHold();    // Exercise 1[m
+[31m-        mobileApp.workOneTurn();  // nie zrobi nic (ON_HOLD)[m
+[31m-        [m
+[31m-        System.out.println("\n--- Resuming project ---");[m
+[31m-        mobileApp.resume();       // Exercise 2[m
+[31m-        [m
+[31m-        while (!mobileApp.isFinished()) {[m
+[31m-            mobileApp.workOneTurn();[m
+[31m-            company.showStatus();[m
+[31m-        }[m
+[31m-        [m
+[31m-        System.out.println("\n🎉 All done!");[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/Manager.class b/com/example/techcorp/Manager.class[m
+[1mdeleted file mode 100644[m
+[1mindex de99aed..0000000[m
+Binary files a/com/example/techcorp/Manager.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Manager.java b/com/example/techcorp/Manager.java[m
+[1mdeleted file mode 100644[m
+[1mindex 8aeaa58..0000000[m
+[1m--- a/com/example/techcorp/Manager.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,12 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-public class Manager extends Employee {[m
+[31m-    public Manager(String name, int skill, double salary) {[m
+[31m-        super(name, skill, salary);[m
+[31m-    }[m
+[31m-[m
+[31m-    @Override[m
+[31m-    public int work() {[m
+[31m-        return getSkill() / 3;[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/Project.class b/com/example/techcorp/Project.class[m
+[1mdeleted file mode 100644[m
+[1mindex ce961b5..0000000[m
+Binary files a/com/example/techcorp/Project.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Project.java b/com/example/techcorp/Project.java[m
+[1mdeleted file mode 100644[m
+[1mindex 735974e..0000000[m
+[1m--- a/com/example/techcorp/Project.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,98 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-import java.util.ArrayList;[m
+[31m-import java.util.List;[m
+[31m-[m
+[31m-public class Project {[m
+[31m-    private String name;[m
+[31m-    private int requiredWork;[m
+[31m-    private int progress;[m
+[31m-    private List<Employee> team;[m
+[31m-    private ProjectStatus status;[m
+[31m-[m
+[31m-    public Project(String name, int requiredWork) {[m
+[31m-        validateName(name);[m
+[31m-        validateRequiredWork(requiredWork);[m
+[31m-        this.name = name;[m
+[31m-        this.requiredWork = requiredWork;[m
+[31m-        this.progress = 0;[m
+[31m-        this.team = new ArrayList<>();[m
+[31m-        this.status = ProjectStatus.PLANNED;[m
+[31m-    }[m
+[31m-[m
+[31m-    public void addEmployee(Employee employee) {[m
+[31m-        if (employee == null) {[m
+[31m-            throw new IllegalArgumentException("Employee cannot be null.");[m
+[31m-        }[m
+[31m-        team.add(employee);[m
+[31m-    }[m
+[31m-[m
+[31m-    // Exercise 1: putOnHold()[m
+[31m-    public void putOnHold() {[m
+[31m-        if (status == ProjectStatus.IN_PROGRESS) {[m
+[31m-            status = ProjectStatus.ON_HOLD;[m
+[31m-            System.out.println("⏸️ Project '" + name + "' put on hold.");[m
+[31m-        }[m
+[31m-    }[m
+[31m-[m
+[31m-    // Exercise 2: resume()[m
+[31m-    public void resume() {[m
+[31m-        if (status == ProjectStatus.ON_HOLD) {[m
+[31m-            status = ProjectStatus.IN_PROGRESS;[m
+[31m-            System.out.println("▶️ Project '" + name + "' resumed.");[m
+[31m-        }[m
+[31m-    }[m
+[31m-[m
+[31m-    public void start() {[m
+[31m-        if (status == ProjectStatus.PLANNED) {[m
+[31m-            status = ProjectStatus.IN_PROGRESS;[m
+[31m-            System.out.println("📢 Project '" + name + "' started.");[m
+[31m-        }[m
+[31m-    }[m
+[31m-[m
+[31m-    public void cancel() {[m
+[31m-        if (status != ProjectStatus.FINISHED) {[m
+[31m-            status = ProjectStatus.CANCELLED;[m
+[31m-            System.out.println("❌ Project '" + name + "' cancelled.");[m
+[31m-        }[m
+[31m-    }[m
+[31m-[m
+[31m-    // Exercise 3: workOneTurn() with status check[m
+[31m-    public void workOneTurn() {[m
+[31m-        if (status != ProjectStatus.IN_PROGRESS) {[m
+[31m-            return;  // Exercise 3: Prevent illegal work[m
+[31m-        }[m
+[31m-[m
+[31m-        for (Employee employee : team) {[m
+[31m-            progress += employee.work();[m
+[31m-        }[m
+[31m-[m
+[31m-        if (progress >= requiredWork) {[m
+[31m-            progress = requiredWork;[m
+[31m-            status = ProjectStatus.FINISHED;[m
+[31m-            System.out.println("✅ Project '" + name + "' finished!");[m
+[31m-        }[m
+[31m-    }[m
+[31m-[m
+[31m-    public boolean isFinished() {[m
+[31m-        return status == ProjectStatus.FINISHED;[m
+[31m-    }[m
+[31m-[m
+[31m-    public String getName() { return name; }[m
+[31m-    public int getRequiredWork() { return requiredWork; }[m
+[31m-    public int getProgress() { return progress; }[m
+[31m-    public List<Employee> getTeam() { return team; }[m
+[31m-    public ProjectStatus getStatus() { return status; }[m
+[31m-[m
+[31m-    private void validateName(String name) {[m
+[31m-        if (name == null || name.isBlank()) {[m
+[31m-            throw new IllegalArgumentException("Project name cannot be null or blank.");[m
+[31m-        }[m
+[31m-    }[m
+[31m-[m
+[31m-    private void validateRequiredWork(int requiredWork) {[m
+[31m-        if (requiredWork <= 0) {[m
+[31m-            throw new IllegalArgumentException("Required work must be greater than 0.");[m
+[31m-        }[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/ProjectStatus.class b/com/example/techcorp/ProjectStatus.class[m
+[1mdeleted file mode 100644[m
+[1mindex 9fbc4aa..0000000[m
+Binary files a/com/example/techcorp/ProjectStatus.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/ProjectStatus.java b/com/example/techcorp/ProjectStatus.java[m
+[1mdeleted file mode 100644[m
+[1mindex e462b99..0000000[m
+[1m--- a/com/example/techcorp/ProjectStatus.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,9 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-public enum ProjectStatus {[m
+[31m-    PLANNED,[m
+[31m-    IN_PROGRESS,[m
+[31m-    FINISHED,[m
+[31m-    CANCELLED,[m
+[31m-    ON_HOLD  // Exercise 1[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/Tester.class b/com/example/techcorp/Tester.class[m
+[1mdeleted file mode 100644[m
+[1mindex 2919383..0000000[m
+Binary files a/com/example/techcorp/Tester.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Tester.java b/com/example/techcorp/Tester.java[m
+[1mdeleted file mode 100644[m
+[1mindex d5d8da0..0000000[m
+[1m--- a/com/example/techcorp/Tester.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,12 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-public class Tester extends Employee {[m
+[31m-    public Tester(String name, int skill, double salary) {[m
+[31m-        super(name, skill, salary);[m
+[31m-    }[m
+[31m-[m
+[31m-    @Override[m
+[31m-    public int work() {[m
+[31m-        return getSkill() / 2;[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/com/example/techcorp/Workable.class b/com/example/techcorp/Workable.class[m
+[1mdeleted file mode 100644[m
+[1mindex 573db38..0000000[m
+Binary files a/com/example/techcorp/Workable.class and /dev/null differ
+[1mdiff --git a/com/example/techcorp/Workable.java b/com/example/techcorp/Workable.java[m
+[1mdeleted file mode 100644[m
+[1mindex f2e4bdc..0000000[m
+[1m--- a/com/example/techcorp/Workable.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,5 +0,0 @@[m
+[31m-package com.example.techcorp;[m
+[31m-[m
+[31m-public interface Workable {[m
+[31m-    int work();[m
+[31m-}[m

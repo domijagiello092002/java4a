@@ -1,6 +1,7 @@
-package com.example.techcorp;
+package com.university.techcorp.domain;
 
 public abstract class Employee implements Workable {
+
     private String name;
     private int skill;
     private double salary;

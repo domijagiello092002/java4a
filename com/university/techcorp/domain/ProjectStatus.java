@@ -1,9 +1,9 @@
-package com.example.techcorp;
+package com.university.techcorp.domain;
 
 public enum ProjectStatus {
     PLANNED,
     IN_PROGRESS,
     FINISHED,
     CANCELLED,
-    ON_HOLD  // Exercise 1
+    ON_HOLD
 }
